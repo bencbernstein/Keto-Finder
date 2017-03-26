@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,43 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="restaurantCell" rowHeight="150" id="X4y-1E-aJg" customClass="RestaurantCell" customModule="Keto_Finder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="restaurantCell" rowHeight="250" id="X4y-1E-aJg" customClass="RestaurantCell" customModule="Keto_Finder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4y-1E-aJg" id="Knf-0e-XB9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-Ys-dUx">
-                                            <rect key="frame" x="8" y="10" width="147" height="128"/>
-                                            <color key="backgroundColor" red="0.87895212310026127" green="0.93199198082010581" blue="0.75274816232446262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-Ys-dUx">
+                                            <rect key="frame" x="194" y="58" width="164" height="151"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94308979174566276" green="1" blue="0.80767665153307677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ae-mY-BEJ">
-                                            <rect key="frame" x="173" y="19" width="97" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ae-mY-BEJ">
+                                            <rect key="frame" x="8" y="10" width="132" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Categories" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vg-Xm-orv">
-                                            <rect key="frame" x="173" y="59" width="97" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Categories" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vg-Xm-orv">
+                                            <rect key="frame" x="278" y="10" width="97" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Reviews / Ratings" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bly-MB-QgU">
+                                            <rect key="frame" x="139" y="10" width="135" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="orc-Xm-CFc">
+                                            <rect key="frame" x="22" y="58" width="164" height="151"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </mapView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Qic-Ys-dUx" firstAttribute="width" secondItem="Knf-0e-XB9" secondAttribute="width" multiplier="0.5" id="2Ds-tP-Nj7" userLabel="Restaurant Image.width = Restaurant Image.height"/>
-                                        <constraint firstItem="Qic-Ys-dUx" firstAttribute="height" secondItem="Knf-0e-XB9" secondAttribute="height" multiplier="0.8" id="ADf-Ab-OZE" userLabel="Restaurant Image.height = 0.5 × height"/>
-                                        <constraint firstItem="1vg-Xm-orv" firstAttribute="top" secondItem="9ae-mY-BEJ" secondAttribute="bottom" constant="10" id="FLT-OW-SQz"/>
-                                        <constraint firstItem="9ae-mY-BEJ" firstAttribute="leading" secondItem="Qic-Ys-dUx" secondAttribute="trailing" constant="20" id="GiE-s6-XBr"/>
-                                        <constraint firstItem="Qic-Ys-dUx" firstAttribute="leading" secondItem="Knf-0e-XB9" secondAttribute="leadingMargin" constant="20" id="fER-BQ-3xg"/>
-                                        <constraint firstItem="Qic-Ys-dUx" firstAttribute="top" secondItem="Knf-0e-XB9" secondAttribute="topMargin" constant="20" id="seL-W3-lcR"/>
-                                        <constraint firstItem="1vg-Xm-orv" firstAttribute="leading" secondItem="Qic-Ys-dUx" secondAttribute="trailing" constant="20" id="tZO-Ye-tne"/>
-                                        <constraint firstItem="9ae-mY-BEJ" firstAttribute="top" secondItem="Knf-0e-XB9" secondAttribute="topMargin" constant="10" id="uwZ-qB-3Oc"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryField" destination="1vg-Xm-orv" id="jhc-R3-l16"/>
+                                    <outlet property="mapView" destination="orc-Xm-CFc" id="33C-Lp-rTU"/>
                                     <outlet property="nameField" destination="9ae-mY-BEJ" id="IKt-sy-qoM"/>
                                     <outlet property="restaurantImage" destination="Qic-Ys-dUx" id="RRL-Og-40h"/>
                                 </connections>

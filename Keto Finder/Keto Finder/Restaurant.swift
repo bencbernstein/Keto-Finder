@@ -7,13 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
-struct Restaurant {
+class Restaurant {
     var name: String
     var categories: [[String:Any]]
     var id: String
     var rating: Int
     var reviewCount: Int
+    var imageURL: String
+    var image: UIImage?
+    var longitude: CGFloat
+    var latitude: CGFloat
     
     var firstCategory: String {
         return categories[0]["title"] as? String ?? "No First Category"
@@ -25,6 +30,14 @@ struct Restaurant {
         self.id = dictionary["id"] as? String ?? "No Id"
         self.rating = dictionary["rating"] as? Int ?? 0
         self.reviewCount = dictionary["review_count"] as? Int ?? 0
+        self.imageURL = dictionary["image_url"] as? String ?? "No Image URL"
+        
+        let coordinates = dictionary["coordinates"] as? [String: Any] ?? [:]
+        self.longitude = coordinates["longitude"] as? CGFloat ?? 0
+        self.latitude = coordinates["latitude"] as? CGFloat ?? 0
+        print("\nlong and lat at init are", longitude, latitude)
+        
+        
     }
     
     

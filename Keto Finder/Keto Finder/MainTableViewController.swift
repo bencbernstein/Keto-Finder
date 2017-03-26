@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class MainTableViewController: UITableViewController {
     
@@ -19,7 +20,6 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         APIManager.getNearby { (restaurants) in
-            print("completed")
             self.restaurants = restaurants
         }
     }
@@ -34,14 +34,16 @@ class MainTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 250
     }
-
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantCell
         cell.nameField.text = restaurants[indexPath.row].name
         cell.categoryField.text = restaurants[indexPath.row].firstCategory
+        cell.restaurantImage.image = restaurants[indexPath.row].image
+        cell.restaurant = restaurants[indexPath.row]
+        
         return cell
     }
 
