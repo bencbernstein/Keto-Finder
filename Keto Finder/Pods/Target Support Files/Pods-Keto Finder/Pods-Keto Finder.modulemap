@@ -1,0 +1,6 @@
+framework module Pods_Keto_Finder {
+  umbrella header "Pods-Keto Finder-umbrella.h"
+
+  export *
+  module * { export * }
+}
